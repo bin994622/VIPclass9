@@ -123,3 +123,111 @@
 # table = furniture('衣柜', 2)
 # home1.call(table)
 # print(home1)
+
+"""
+4.士兵开枪
+需求：
+1）.士兵瑞恩有一把AK47
+2）.士兵可以开火(士兵开火扣动的是扳机)
+3）.枪 能够 发射子弹(把子弹发射出去)
+4）.枪 能够 装填子弹 --增加子弹的数量
+
+"""
+# # ------------------------------------
+#
+# class Dog(object):
+#     def work(self):
+#         print('指哪打哪.....')
+# class ArmyDog(Dog):
+#     def work(self):
+#         print('追击敌人...')
+# class DrugDog(Dog):
+#     def work(self):
+#         print('追查毒品...')
+# class Person(object):
+#     def work_with_dog(self, dog):
+#         dog.work()
+#
+# ad = ArmyDog()
+# dd = DrugDog()
+# daqiu = Person()
+# daqiu.work_with_dog(ad)
+# daqiu.work_with_dog(dd)
+
+
+# # 异常定义
+# try:
+#     open('test.txt', 'r')
+# except:
+#     open('test.txt', 'w')
+
+
+# # 指定异常
+# try:
+#     print(num)
+# except NameError:
+#     print('num 有错误')
+
+# # 捕获多个指定异常
+# try:
+#     print(1/10)
+# except ZeroDivisionError:
+#     print('0不能做除数')
+#
+# try:
+#     print(1/0)
+# except (NameError, ZeroDivisionError):
+#     print('0不能做除数')
+
+# # 捕获异常的描述信息
+# try:
+#     print(1/0)
+# except (NameError, ZeroDivisionError) as msg:
+#     print(msg)
+
+# # 捕获所有异常
+# try:
+#     print(1/0)
+# except Exception as msg:
+#     print(msg)
+
+
+# # 异常的else
+# try:
+#     print(5)
+# except Exception as msg:
+#     print(msg)
+# else:
+#     print('我是else, 是没有异常的时候执行的代码')
+
+# # 异常的finally
+# try:
+#     f = open('test.txt', 'r')
+# except Exception as msg:
+#     print(msg)
+# else:
+#     print('没有异常')
+# finally:
+#     print('finally执行')
+#     f.close()
+
+# # 异常的传递
+# import time
+# try:
+#     f = open('test.txt')
+#     try:
+#         while True:
+#             content = f.readline()
+#             if len(content) == 0:
+#                 break
+#             time.sleep(2)
+#             print(content)
+#     except:
+#         # 如果在读取文件的过程中，产生了异常，那么就会捕获到
+#         # 比如 按下了 ctrl + c
+#         print('意外终止了读取数据')
+#     finally:
+#         f.close()
+#         print('关闭文件')
+# except:
+#     print('没有这个文件')
